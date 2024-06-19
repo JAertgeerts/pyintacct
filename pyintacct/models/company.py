@@ -14,7 +14,7 @@ class SupDoc(API21Object):
     supdocid: Optional[str] = None
     supdocfoldername: Optional[str] = None
     supdocdescription: Optional[str] = None
-    attachments: Attachment = Field(default_factory=Attachment)
+    attachments: List[Attachment] = Field(default_factory=Attachment)
 
 class MailAddress(BaseModel):
     address1: Optional[str] = None
